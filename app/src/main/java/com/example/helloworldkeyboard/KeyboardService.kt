@@ -17,13 +17,19 @@ class KeyboardService : InputMethodService() {
         val inputView = inflater.inflate(R.layout.keyboard_layout, null)
 
         // Get references to your buttons
+        val buttonHello = inputView.findViewById<Button>(R.id.button_emoji_1)
+        button_emoji_1.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
+
+        val buttonWorld = inputView.findViewById<Button>(R.id.button_emoji_2)
+        button_emoji_2.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
+
         val buttonHello = inputView.findViewById<Button>(R.id.button_hello)
         val buttonWorld = inputView.findViewById<Button>(R.id.button_world)
         val buttonKeyboard = inputView.findViewById<Button>(R.id.button_keyboard)
         val buttonx = inputView.findViewById<Button>(R.id.button_x)
 
         // Set click listeners for your buttons
-        buttonHello.setOnClickListener { inputText("我爱你") }//字符串输入
+        buttonHello.setOnClickListener { webInputText("我爱你") }//字符串输入
         buttonWorld.setOnClickListener { inputText("192.168.1.1") }
         buttonKeyboard.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
         buttonx.setOnClickListener { inputText("⅓") }
@@ -32,6 +38,11 @@ class KeyboardService : InputMethodService() {
     }
 
     private fun inputText(text: String) {
+        val inputConnection = currentInputConnection
+        inputConnection?.commitText(text, 1)
+    }
+
+    private fun webInputText(text: String) {
         val inputConnection = currentInputConnection
         //inputConnection?.commitText(text, 1)
 
