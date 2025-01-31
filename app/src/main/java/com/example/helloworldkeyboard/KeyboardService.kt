@@ -3,6 +3,9 @@ package com.example.helloworldkeyboard
 import android.inputmethodservice.InputMethodService
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.text.Editable; 
+import android.text.TextWatcher; 
 
 import java.io.IOException;
 
@@ -33,8 +36,12 @@ class KeyboardService : InputMethodService() {
                 println("文本已更改: ${s.toString()}")
             }
 
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                println("文本已更改: ${s.toString()}") //⚠️
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                println("文本已更改: ${s.toString()}") //⚠️
+            }
         })
 
         // 📌Get references to your buttons
@@ -50,7 +57,7 @@ class KeyboardService : InputMethodService() {
         val button_wime = inputView.findViewById<Button>(R.id.button_wime)
         button_wime.setOnClickListener { webInputText("") } //输入WIME      
 
-        
+
         val buttonHello = inputView.findViewById<Button>(R.id.button_hello)
         val buttonWorld = inputView.findViewById<Button>(R.id.button_world)
         val buttonKeyboard = inputView.findViewById<Button>(R.id.button_keyboard)
