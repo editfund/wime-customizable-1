@@ -1,55 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="16dp">
-    <Button
-        android:id="@+id/button_emoji_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="📌" />
-    <Button
-        android:id="@+id/button_emoji_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🆘" />
-    <Button
-        android:id="@+id/button_emoji_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="⚠️" />    
+        <Button
+            android:id="@+id/button_emoji_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📌" />
+        <Button
+            android:id="@+id/button_emoji_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🆘" />
+        <Button
+            android:id="@+id/button_emoji_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚠️" />    
 
 
-    <Button
-        android:id="@+id/button_hello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="我爱你" />
+        <Button
+            android:id="@+id/button_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我爱你" />   
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="192.168.1.1" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+        <Button
+            android:id="@+id/button_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="192.168.1.1" />
 
-    <Button
-        android:id="@+id/button_keyboard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="📌" />
+        <Button
+            android:id="@+id/button_keyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📌" />
 
-    <Button
-        android:id="@+id/button_x"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="⅓" />
+        <Button
+            android:id="@+id/button_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⅓" />
 
-    <Button
-        android:id="@+id/button_wime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="WIME" />    
+        <Button
+            android:id="@+id/button_wime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="WIME" />    
+    </LinearLayout>
+       
 </LinearLayout>
+
+
