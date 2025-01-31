@@ -21,7 +21,7 @@ class KeyboardService : InputMethodService() {
         button_emoji_1.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
 
         val button_emoji_2 = inputView.findViewById<Button>(R.id.button_emoji_2)
-        button_emoji_2.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
+        button_emoji_2.setOnClickListener { inputText("\uD83D\uDCCC") } //输入🆘
 
         val buttonHello = inputView.findViewById<Button>(R.id.button_hello)
         val buttonWorld = inputView.findViewById<Button>(R.id.button_world)
@@ -31,7 +31,7 @@ class KeyboardService : InputMethodService() {
         // Set click listeners for your buttons
         buttonHello.setOnClickListener { webInputText("我爱你") }//字符串输入
         buttonWorld.setOnClickListener { inputText("192.168.1.1") }
-        buttonKeyboard.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
+        buttonKeyboard.setOnClickListener { inputText("\ud83c\udd98") } //输入📌
         buttonx.setOnClickListener { inputText("⅓") }
 
         return inputView
