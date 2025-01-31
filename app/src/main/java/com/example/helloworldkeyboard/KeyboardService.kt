@@ -16,7 +16,28 @@ class KeyboardService : InputMethodService() {
         val inflater = layoutInflater
         val inputView = inflater.inflate(R.layout.keyboard_layout, null)
 
-        // Get references to your buttons
+        //📌文本框
+        val editText = inputView.findViewById<EditText>(R.id.editText)
+
+        // 设置文本
+        editText.setText("默认文本")
+
+        // 获取文本
+        val text = editText.text.toString()
+        println("当前文本: $text")
+
+        // 添加文本改变监听器
+        editText.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                // 文本改变后调用
+                println("文本已更改: ${s.toString()}")
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+
+        // 📌Get references to your buttons
         val button_emoji_1 = inputView.findViewById<Button>(R.id.button_emoji_1)
         button_emoji_1.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
 
@@ -29,6 +50,7 @@ class KeyboardService : InputMethodService() {
         val button_wime = inputView.findViewById<Button>(R.id.button_wime)
         button_wime.setOnClickListener { webInputText("") } //输入WIME      
 
+        
         val buttonHello = inputView.findViewById<Button>(R.id.button_hello)
         val buttonWorld = inputView.findViewById<Button>(R.id.button_world)
         val buttonKeyboard = inputView.findViewById<Button>(R.id.button_keyboard)
