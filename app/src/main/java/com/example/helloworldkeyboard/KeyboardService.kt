@@ -17,10 +17,10 @@ class KeyboardService : InputMethodService() {
         val inputView = inflater.inflate(R.layout.keyboard_layout, null)
 
         // Get references to your buttons
-        val buttonHello = inputView.findViewById<Button>(R.id.button_emoji_1)
+        val button_emoji_1 = inputView.findViewById<Button>(R.id.button_emoji_1)
         button_emoji_1.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
 
-        val buttonWorld = inputView.findViewById<Button>(R.id.button_emoji_2)
+        val button_emoji_2 = inputView.findViewById<Button>(R.id.button_emoji_2)
         button_emoji_2.setOnClickListener { inputText("\uD83D\uDCCC") } //输入📌
 
         val buttonHello = inputView.findViewById<Button>(R.id.button_hello)
