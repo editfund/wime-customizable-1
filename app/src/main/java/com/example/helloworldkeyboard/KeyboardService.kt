@@ -14,7 +14,29 @@ import okhttp3.Request
 import okhttp3.Response
 
 class KeyboardService : InputMethodService() {
+    private lateinit var webView: WebView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        webView = findViewById(R.id.webview)
+        
+        // Enable JavaScript (optional)
+        webView.settings.javaScriptEnabled = true
+
+        // Load a URL
+        webView.loadUrl("https://www.example.com")
+
+        // Handle link navigation within WebView (optional)
+        webView.webViewClient = WebViewClient()
+    }
+
+
     override fun onCreateInputView(): View {
+
+
+
         // Inflate your keyboard layout from the XML file
         val inflater = layoutInflater
         val inputView = inflater.inflate(R.layout.keyboard_layout, null)
