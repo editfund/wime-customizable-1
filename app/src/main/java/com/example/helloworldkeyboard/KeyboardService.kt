@@ -17,7 +17,7 @@ import okhttp3.Response
 class KeyboardService : InputMethodService() {
     private lateinit var webView: WebView
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreateInputView(savedInstanceState: Bundle?): View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -31,11 +31,6 @@ class KeyboardService : InputMethodService() {
 
         // Handle link navigation within WebView (optional)
         webView.webViewClient = WebViewClient()
-    }
-
-
-    override fun onCreateInputView(): View {
-
 
 
         // Inflate your keyboard layout from the XML file
